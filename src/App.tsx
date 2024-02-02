@@ -2,16 +2,25 @@ import './App.css';
 
 import { Route, Switch } from 'react-router-dom';
 
-import { Home } from './pages';
+import { Home, Experiences } from './pages';
+
+import { Navbar } from './components';
 
 function App() {
   return (
-    <Switch>
-      <Route
-        path={'/'}
-        component={Home}
-      />
-    </Switch>
+    <>
+      <Navbar />
+      <Switch>
+        <Route
+          path={'/experiences'}
+          component={Experiences}
+        />
+        <Route
+          path={'/'}
+          component={Home}
+        />
+      </Switch>
+    </>
   );
 }
 
