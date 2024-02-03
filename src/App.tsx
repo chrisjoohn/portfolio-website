@@ -2,7 +2,7 @@ import './App.css';
 
 import { Route, Switch } from 'react-router-dom';
 
-import { Home, Experiences } from './pages';
+import { Error404 } from './pages/Error';
 
 import { Navbar } from './components';
 
@@ -16,8 +16,13 @@ function App() {
           component={Experiences}
         />
         <Route
+          exact
           path={'/'}
           component={Home}
+        />
+        <Route
+          path={'*'}
+          component={Error404}
         />
       </Switch>
     </>
