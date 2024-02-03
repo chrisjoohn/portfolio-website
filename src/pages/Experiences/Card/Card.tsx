@@ -42,7 +42,7 @@ const Card: FC<CardProps> = (props) => {
       </Tenure>
       <Content>
         <Header>
-          {position} | {companyName}
+          {position} &middot; {companyName}
         </Header>
         <Description>{jobDescription}</Description>
       </Content>
